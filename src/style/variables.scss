@@ -1,1 +1,12 @@
 // Put variables, reusables, mixins etc here
+$colPadding: 0.5rem;
+
+@mixin colWrapper() {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-evenly;
+  padding: $colPadding;
+  &:hover {
+    box-shadow: 1px 1px 3px rgba(33,33,33,.2);
+  }
+}

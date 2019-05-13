@@ -1,0 +1,16 @@
+@import "../../style/variables.scss";
+
+.charityListContainer {
+  @include colWrapper();
+  border: 1px solid red;
+  width: calc(25% - #{$colPadding});
+  .charityList {
+    margin-bottom: 20px;
+    text-align: center;
+    cursor: pointer;
+    img.logo {
+      width: 75px;
+      height: 100%;
+    }
+  }
+}

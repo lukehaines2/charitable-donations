@@ -7,9 +7,10 @@ export const Donations = props => {
 
   return (
     <div className="donationsContainer">
+      <div className="sectionHeader">Donations</div>
       {error && <div>{error}</div>}
       {isLoading ?
-        <div>Loading...</div>
+        <div className="instructions">Loading...</div>
         :
         <DonationTicket {...{donations}} />
       }
@@ -31,7 +32,7 @@ const DonationTicket = ({donations}) => {
           </div>
         ))
         :
-        <div>Please select a charity from the left!</div>
+        <div className="instructions">Please select a charity from the list!</div>
       }
     </React.Fragment>
   )

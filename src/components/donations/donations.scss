@@ -2,10 +2,17 @@
 
 .donationsContainer {
   @include colWrapper();
-  border: 1px solid red;
   width: 75%;
   .donationTicket {
+    @include ticketStyles();
     padding: 25px;
-    border: 1px solid lightgrey;
+    font-size: 0.95rem;
+  }
+  .instructions {
+    height: 125px;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    font-weight: 600;
   }
 }

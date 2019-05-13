@@ -2,15 +2,31 @@
 
 // Globals (caps)
 $GlobalPadding: 1rem;
+$BoxShadow: 1px 1px 3px rgba(33,33,33,.2);
 
+// Local vars
 $colPadding: 1rem;
+$ticketBtmMargin: 1rem;
+$ticketPadding: 1rem;
 
 @mixin colWrapper() {
   // display: flex;
   // flex-direction: column;
   // justify-content: space-evenly;
   padding: $colPadding;
+}
+
+@mixin ticketStyles() {
+  margin-bottom: $ticketBtmMargin;
+  padding: $ticketPadding;
+  background: #ffffff;
+  box-shadow: $BoxShadow;
+  // Transparent border to stop size change on hover - for a smoother feel
+  border: 1px solid transparent;
+  &.active {
+    border: 1px solid #c9c9c9;
+  }
   &:hover {
-    box-shadow: 1px 1px 3px rgba(33,33,33,.2);
+    border: 1px solid #c9c9c9;
   }
 }

@@ -5,11 +5,11 @@ module.exports = [{
 }, {
   id: "2357",
   name: "Macmillan Cancer Support",
-  logo: "http://images.justgiving.com/image/b410179a-2042-4c6b-903b-df106b48fc3c.jpg"
+  logo: "http://images.justgiving.com/image/8c249c61-7994-4afe-8af0-d93c78a0bb5d.jpg"
 }, {
   id: "2116",
   name: "Cancer Research UK",
-  logo: "http://images.justgiving.com/image/8c249c61-7994-4afe-8af0-d93c78a0bb5d.jpg"
+  logo: "http://images.justgiving.com/image/b410179a-2042-4c6b-903b-df106b48fc3c.jpg"
 }, {
   id: "13441",
   name: "Oxfam",

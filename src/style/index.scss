@@ -20,11 +20,18 @@ body {
     flex-direction: column;
     align-content: center;
     padding: $GlobalPadding;
+    background: #f5f5f5;
     main {
       display: flex;
       flex-direction: row;
       height: 100%;
       width: 100%;
+    }
+    .sectionHeader {
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2rem;
     }
   }
 }

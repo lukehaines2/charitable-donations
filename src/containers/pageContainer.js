@@ -13,39 +13,40 @@ export default class PageContainer extends React.Component {
       charities: stub,
       selectedCharity: null,
       donations: [],
-      isLoading: false
-    }
-    this.handleChartyClick = this.handleChartyClick.bind(this);
+      isLoading: false,
+      error: null
+    };
+    this.handleCharityClick = this.handleCharityClick.bind(this);
   }
 
   componentDidMount() {
     //
   }
 
-  handleChartyClick(id) {
+  handleCharityClick(id) {
     this.setState({
-      isLoading: true
+      isLoading: true,
+      selectedCharity: id
     });
 
     // Call donations api using charity ID
     getDonationData(id).then(res => {
-      console.log('res', res.donations);
       this.setState({
-        selectedCharity: id,
-        donations: res,
-        isLoading: false
+        donations: res.donations ? res.donations : [],
+        isLoading: false,
+        error: !res.donations && res[0].desc
       });
     });
   }
 
   render() {
-    const { charities, donations, isLoading } = this.state;
+    const { charities, selectedCharity, donations, isLoading, error } = this.state;
 
     return(
       <div className="pageContainer">
         <main>
-          <CharityList {...{charities}} handleChartyClick={this.handleChartyClick} />
-          {isLoading ? <div> Loading...</div> : <Donations {...{donations}} />}
+          <CharityList {...{charities, selectedCharity, isLoading}} handleCharityClick={this.handleCharityClick} />
+          <Donations {...{donations, isLoading, error}} />
         </main>
       </div>
     )

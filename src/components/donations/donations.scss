@@ -1,4 +1,11 @@
+@import "../../style/variables.scss";
+
 .donationsContainer {
+  @include colWrapper();
   border: 1px solid red;
   width: 75%;
+  .donationTicket {
+    padding: 25px;
+    border: 1px solid lightgrey;
+  }
 }

@@ -22,4 +22,4 @@ module.exports = [{
   id: "18570",
   name: "Save the Children",
   logo: "http://images.justgiving.com/image/a2d03110-67aa-43da-aaec-56f842e7dc3e.png"
-}]
+}];

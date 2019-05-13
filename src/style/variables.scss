@@ -1,5 +1,9 @@
 // Put variables, reusables, mixins etc here
-$colPadding: 0.5rem;
+
+// Globals (caps)
+$GlobalPadding: 1rem;
+
+$colPadding: 1rem;
 
 @mixin colWrapper() {
   // display: flex;

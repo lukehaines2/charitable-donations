@@ -5,12 +5,19 @@
   border: 1px solid red;
   width: calc(25% - #{$colPadding});
   .charityList {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-align: center;
     cursor: pointer;
+    .name {
+      font-size: 0.8rem;
+      &.active {
+        font-weight: bold;
+      }
+    }
     img.logo {
-      width: 75px;
+      width: 60px;
       height: 100%;
+      margin-top: 10px;
     }
   }
 }

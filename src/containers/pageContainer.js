@@ -21,8 +21,7 @@ export default class PageContainer extends React.Component {
 
   componentDidMount() {
     // If we wanted to initialise the app with a selected charity, we can comment this back in
-    // NOTE: Ideally this would be a number rather than string, (could toString in component now but it feels unnecessary/wrong)
-    this.handleCharityClick("183092");
+    this.handleCharityClick(183092);
   }
 
   handleCharityClick(id) {

@@ -24,10 +24,9 @@ const DonationTicket = ({donations}) => {
       {donations.length > 0 ?
         donations.map((donation, i) => (
           <div key={donation.donorDisplayName+i} className="donationTicket">
-            <div>Donor: {donation.donorDisplayName} ({donation.currencyCode})</div>
-            <div>Amount: {donation.amount}</div>
-            <div>Date: {donation.donationDate}</div>
-            <div>Amount: {donation.amount}</div>
+            <strong>{getDate(donation.donationDate)}</strong>
+            <div>{donation.donorDisplayName}</div>
+            <div>Donated: £{donation.amount}</div>
             <div>Message: {donation.message}</div>
           </div>
         ))
@@ -37,3 +36,9 @@ const DonationTicket = ({donations}) => {
     </React.Fragment>
   )
 };
+
+const getDate = date => {
+  const dateRegex = date.match(/\d+/g);
+  const newDate = new Date(parseInt(dateRegex[0])).toLocaleDateString('en-GB');
+  return newDate
+}

@@ -21,7 +21,7 @@ export default class PageContainer extends React.Component {
 
   componentDidMount() {
     // If we wanted to initialise the app with a selected charity, we can comment this back in
-    this.handleCharityClick(183092);
+    // this.handleCharityClick(183092);
   }
 
   handleCharityClick(id) {

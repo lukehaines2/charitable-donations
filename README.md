@@ -1,4 +1,4 @@
-# App to display the latest donations for a selection of charities
+## App to display the latest donations for a selection of charities
 
 ### Key points:
 - Focus on Clean, Modular, Dry code
@@ -15,7 +15,7 @@ There is a commented line in the `pageContainer` within `componentDidMount` that
 
 ### File structure:
 - Containers, Components -> inc scss files + tests
-- Styling uses SASS
+- Style - All styling uses SASS
 - Public - Nothing special here, but you might recognise the favicon ;)
 - Util - `api.js` Used to separate API concerns
 - Config - Includes Api endpoints and appId. Would add env variables here if we were to push the app through a _proper_ deployment process.

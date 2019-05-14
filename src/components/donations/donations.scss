@@ -15,7 +15,7 @@ $ticketPadding: 25px;
     font-size: 0.9rem;
     line-height: normal;
   }
-  .instructions {
+  .instructions, .loading {
     height: $ticketHeight;
     display: flex;
     align-items: center;

@@ -13,17 +13,17 @@ export const CharityList = props => {
     if (!isLoading && chosen !== selectedCharity) handleCharityClick(chosen);
   };
 
+  // NOTE: Bit of hack for handling strings & numbers in state of selectedCharity - Ideally would never have alternating use of strings and numbers across our components
+  const selCharity = selectedCharity ? selectedCharity.toString() : selectedCharity;
   return (
     <div className="charityListContainer">
       <div className="sectionHeader">Charities</div>
       {charities.map(charity => (
-        <div key={charity.name} className={cx("charityList", {active: selectedCharity == charity.id})} data-id={charity.id} onClick={onClick}>
-          <div className={cx("name", {active: selectedCharity == charity.id})}>{charity.name}</div>
+        <div key={charity.name} className={cx("charityList", {active: selCharity === charity.id})} data-id={charity.id} onClick={onClick}>
+          <div className={cx("name", {active: selCharity === charity.id})}>{charity.name}</div>
           <img className="logo" src={charity.logo} alt={charity.name} />
         </div>
       ))}
     </div>
   )
 };
-
-// NOTE: Using `==` instead of `===` in classnames (L20+L21) for speed but ideally we wouldnt be alternating use of strings and numbers across our components

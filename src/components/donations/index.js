@@ -1,7 +1,6 @@
 import React from "react";
 
 import { DonationTicket } from "./donationTicket";
-
 import "./donations.scss";
 
 export const Donations = props => {
@@ -10,12 +9,12 @@ export const Donations = props => {
   return (
     <div className="donationsContainer">
       <div className="sectionHeader">Donations</div>
-      {error && <div>{error}</div>}
-      {isLoading ?
-        <div className="instructions">Loading...</div>
+      {error && <div className="error">{error}</div>}
+      {!error && (isLoading ?
+        <div className="loading">Loading...</div>
         :
         <DonationTicket {...{donations}} />
-      }
+      )}
     </div>
   )
 };
